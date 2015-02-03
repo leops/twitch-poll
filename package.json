@@ -1,0 +1,30 @@
+{
+  "name": "twitch-poll",
+  "version": "0.0.1",
+  "description": "A simple poll for Twitch IRC",
+  "main": "index.coffee",
+  "scripts": {
+    "start": "coffee index.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leops/twitch-poll"
+  },
+  "keywords": [
+    "twitch",
+    "poll"
+  ],
+  "author": "leops",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leops/twitch-poll/issues"
+  },
+  "homepage": "https://github.com/leops/twitch-poll",
+  "dependencies": {
+    "coffee-script": "^1.9.0",
+    "express": "^4.11.2",
+    "jade": "^1.9.1",
+    "pg": "^4.2.0",
+    "twitch-irc": "^1.1.0"
+  }
+}
