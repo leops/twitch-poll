@@ -33,11 +33,11 @@ app.get '/', (req, res) ->
     pg.connect process.env.DATABASE_URL, (err, client) ->
         if err?
             console.error(err)
-            return res.status(500).send(err)
+            return res.status(500).send("There was an error connecting to the database.")
         client.query 'SELECT props.*, (SELECT COUNT(*) FROM users WHERE users.vote = props.id) AS note FROM props ORDER BY note', (err, result) ->
             if err?
                 console.error(err)
-                return res.status(500).send(err)
+                return res.status(500).send("An error was encountered while fecthing the poll data")
             res.render "index", {props: result.rows}
 
 app.listen process.env.PORT, -> console.log "Listening on port #{process.env.PORT}"
